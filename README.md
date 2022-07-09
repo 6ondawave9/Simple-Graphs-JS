@@ -4,3 +4,4 @@
 1) Скачайте и импортруйте в проект config.js  - файл с настройками графика
 <script src="config.js"></script>
 2) Импортируйте в проект script.js
+https://raw.githack.com/6ondawave9/Simple-Graphs-JS/main/script.js
