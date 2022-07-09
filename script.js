@@ -17,7 +17,9 @@ function graph(min, scaleV, scaleH, amount) {
     let ctx = canvas.getContext('2d')
 
     //Уставновка размеров канваса
-    canvas.height = (Math.max(...amount))*min+1
+    let raz = scaleV - (Math.max(...amount))%scaleV
+    console.log(raz)
+    canvas.height = (Math.max(...amount))*min+1+scaleV - (Math.max(...amount))%scaleV
     canvas.width  = (amount.length-1)*scaleH+1 //кол-во линий = кол-во точек - 1
     //
 
@@ -55,7 +57,7 @@ function graph(min, scaleV, scaleH, amount) {
             //
         }
 
-        for(let i = 0; i <= (Math.max(...amount)/scaleV); i++){
+        for(let i = 0; i <= (Math.ceil(Math.max(...amount)/scaleV)); i++){
             //Горизонтальные линии
             ctx.beginPath()
             ctx.moveTo(0, (i*scaleV*min))
@@ -116,4 +118,8 @@ function graph(min, scaleV, scaleH, amount) {
         ctx.stroke()
         //
     }
+}
+
+function towers() {
+
 }
