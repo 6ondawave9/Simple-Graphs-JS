@@ -1,19 +1,20 @@
 let config = {
 
-    heightScale: 1, //
-    degrees: 50, //
-    widthScale: 70, //
-    height: '100%', //
-    width: '100%', //
+    heightScale: 1.0, // Масштабирование высоты 
+    degrees: 50, // Шаг деления вертикальной шкалы
+    widthScale: 70, // Ширина отступа горизонатльной шкалы в px
+    height: '100%', // Высота блока с графиком 
+    width: '100%', // Ширина блока с графиком
+    //Если необходимо вписать график в блок без полос прокуртки - настройте heightScale и widthScale в нужных пропорциях
 
-    grid: true, //
-    vertLine: true, //
-    horLine: true, //
-    points: true, //
+    grid: true, // Отображение сетки
+    vertLine: true, // Отображение вертикальной шкалы значений
+    horLine: true, // Отображение горизонтальной шкалы значений
+    points: true, // Отображение ключевых точек и модальных окон
 
-    upColor: 'green', //
-    downColor: 'red', // 
-    sameColor: 'blue', //
-    lineWidth: 3, //
+    upColor: 'green', // Цвет если график идёт вверх
+    downColor: 'red', // Цвет если график идёт вниз
+    sameColor: 'blue', // Цвет если график стабилен
+    lineWidth: 3, // Ширина линии графика
 
 }

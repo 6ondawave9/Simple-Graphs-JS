@@ -1,4 +1,4 @@
-graph(config.heightScale, config.degrees, config.widthScale, arr)
+graph(config.heightScale, config.degrees, config.widthScale, SimpleGraphsJSData)
 
 function graph(min, scaleV, scaleH, amount) {
 
