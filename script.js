@@ -17,9 +17,14 @@ function graph(min, scaleV, scaleH, amount) {
     let ctx = canvas.getContext('2d')
 
     //Уставновка размеров канваса
-    let raz = scaleV - (Math.max(...amount))%scaleV
+    let raz = (Math.max(...amount))%scaleV
+    if (raz == 0) {
+        canvas.height = (Math.max(...amount))*min+1
+    } else {
+        canvas.height = (Math.max(...amount))*min+1 + scaleV - (Math.max(...amount))%scaleV
+    }
     console.log(raz)
-    canvas.height = (Math.max(...amount))*min+1+scaleV - (Math.max(...amount))%scaleV
+    //canvas.height = (Math.max(...amount))*min+1+scaleV - (Math.max(...amount))%scaleV
     canvas.width  = (amount.length-1)*scaleH+1 //кол-во линий = кол-во точек - 1
     //
 
