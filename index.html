@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      #line_graph {
+          height: 300px;
+          width: 600px;
+      }
+
+      #tower_graph {
+          height: 300px;
+          width: 600px;
+      }
+
+      #circle_graph {
+          height: 300px;
+          width: 600px;
+      }
+
+      #double_line_graph {
+          height: 300px;
+          width: 600px;
+      }
+    </style>
+    <title>GRAPHS</title>
+</head>
+
+<body>
+
+  <div style="display: flex; flex-wrap: wrap; width: 100%; justify-content: center;">
+    <div id="line_graph"></div>
+    <div id="double_line_graph"></div>
+    <div id="tower_graph"></div>
+    <div id="circle_graph"></div>
+  </div>
+
+</body>
+
+<script src="script.js"></script>
+
+<script>
+    let testData = [100, 50, 100, 200, 500, 200, 200, 100, 50, 100, 200, 530, 200, 200]
+    let testData2 = [10, 40, 160, 10, 20, 53, 20, 20]
+    let testDataCircle = {
+        Google: 5,
+        Microsoft: 5,
+        Meta: 5,
+        Yandex: 5,
+    }
+    SGJ_line_graph("line_graph", testData, 50)
+    SGJ_tower_graph("tower_graph", testData, 50)
+    SGJ_donut_graph("circle_graph", testDataCircle)
+    SGJ_double_line_graph("double_line_graph", testData, testData2, 50)
+</script>
+
+</html>
